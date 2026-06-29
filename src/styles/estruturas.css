@@ -1,0 +1,87 @@
+/* Isso aqui é muito útil... Uso bastante */
+/* Isso determina que a borda dos elementos também fazem parte do tamanho dele, evitando inconsistência e vazamento */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Aqui evitei o HTML de ser rolável horizontalmente, que é feio */
+/* Adicionalmente, deixei o rolamento suave para quando o usuário vai para outro elemento via Hyperlinks */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Header fixo no topo, com um fundo levemente transparente */
+/* Pelo fundo ser transparente, coloquei um efeito de borro aos elementos do fundo */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em;
+  background-color: rgba(0, 141, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1090;
+}
+
+main {
+  position: relative;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1920px;
+}
+
+.header-items {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+  padding: 2em;
+  scroll-margin-top: 50px;
+}
+
+.projects-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  gap: 2em;
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+  gap: 2;
+}
+

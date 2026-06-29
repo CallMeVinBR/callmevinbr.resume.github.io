@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt-br" translate="yes">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinicius | Resume</title>
+    <link rel="stylesheet" href="./src/styles/elementos.css" />
+    <link rel="stylesheet" href="./src/styles/estruturas.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Adicionado nav para uma semântica melhor -->
+      <nav class="header-items">
+        <!-- Hyperlink foi usado antes da div para que ela inteira tenha o evento de redirecionamento -->
+        <!-- O link é o ID dos elementos na página, para rolar até eles -->
+        <a href="#sobreMim">
+          <div class="item">Sobre mim</div>
+        </a>
+        <a href="#formacao">
+          <div class="item">Formação</div>
+        </a>
+        <a href="#portfolio">
+          <div class="item">Portfólio</div>
+        </a>
+        <a href="#contato">
+          <div class="item">Contato</div>
+        </a>
+      </nav>
+    </header>
+
+    <!-- Aqui reside o conteúdo principal do site -->
+    <!-- OBS: Usei o Prettier para a formatação do código. Por isso, algumas formatações podem estar peculiares -->
+    <main>
+      <div class="container" id="sobreMim">
+        <h4 class="title large">Sobre mim</h4>
+        <!-- Preferi usar um span para não ter espaçamento entre linhas -->
+        <span class="section">Quem sou eu?</span>
+        <p>
+          Me chamo Vinicius Fonseca, atualmente estudo Engenharia de Software e
+          sou um profissional apaixonado por programação e desenvolvimento Web.
+          Sou formado em ADS, e foi a minha curiosidade que me inspirou a cursar
+          novamente em um período mais longo. Este currículo foi desenvolvido em
+          prol da realização de um trabalho na minha faculdade, e decidi adotar
+          um design bem simples para ser leve e de fácil usabilidade!
+        </p>
+        <p>
+          <b>Fique à vontade para analisar os itens e o código-fonte.</b>
+        </p>
+
+        <!-- Espaçamento entre os diferentes tópicos de uma seção -->
+        <br />
+
+        <span class="section">Meus Hobbies</span>
+        <p>
+          Além da minha paixão por trabalhar, possuo também uma lista de hobbies
+          que faço em meu tempo livre.
+          <i
+            >É importante acalmar a mente para trabalhar com
+            <b>agilidade!</b></i
+          >
+        </p>
+        <!-- Aqui não é necessário ordenar a lista, então fiz uma lista identificada por pontos, sem ordem -->
+        <ul>
+          <li>Jogar com amigos ou sozinho desfrutando uma boa história.</li>
+          <li>Tocar piano e aprender músicas, de ouvido ou com cifras.</li>
+          <li>
+            Treinar a mente com programação e projetos, ou o corpo com academia.
+          </li>
+          <li>
+            Dar um rolê em shoppings ou chamar os amigos/a família para casa.
+          </li>
+          <li>
+            Trocar ideias sobre o vasto mundo da Tecnologia moderna com amigos
+            ou profissionais.
+          </li>
+        </ul>
+
+        <br />
+      </div>
+
+      <!-- Divisão em linha horizontal entre as seções diferentes -->
+      <hr />
+
+      <div class="container" id="formacao">
+        <h4 class="title large">Formação</h4>
+        <span class="section">Cursos</span>
+        <!-- Lista ordenada numericamente, neste contexto, é mais adequada -->
+        <!-- O que determina o tipo de ordenação é o type="" após a tag -->
+        <ol type="1">
+          <li>
+            <i>Colégio Técnico Bento Quirino</i> &dashv;
+            <b>Informática/TI</b> &dashv; 2020 à 2022
+          </li>
+          <li>
+            <i>UNISAL - Centro Universitário Salesiano de São Paulo</i> &dashv;
+            <b>Análise e Desenvolvimento de Sistemas</b> &dashv; 2023 à 2025
+          </li>
+          <li>
+            <i>Trios de Capacitação</i> &dashv;
+            <b>Testes Funcionais Web e Mobile</b> &dashv; 2025 à 2025
+          </li>
+          <li>
+            <i>UNINTER - Centro Universitário Internacional</i> &dashv;
+            <b>Engenharia de Software (Remoto)</b> &dashv; 2025 à 2029
+          </li>
+        </ol>
+
+        <br />
+
+        <span class="section">Idiomas</span>
+        <ul>
+          <li>Português - <b>Nativo</b></li>
+          <li>Inglês - <b>Avançado</b></li>
+          <li>Espanhol - <b>Básico</b></li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <div class="container" id="portfolio">
+        <h4 class="title large">Portfólio</h4>
+        <p style="text-align: center">
+          Como um desenvolvedor, possuo uma série de projetos que variam em
+          tamanho e complexidade, publicados em meu perfil do Github. Abaixo,
+          listo alguns exemplos:
+        </p>
+        <!-- container flex para que os elementos se quebrem em diferentes telas -->
+        <div class="projects-flex">
+          <!-- Aqui optei por um grid, para alinhar os itens de forma mais consistente. Possuem a mesma estrutura, então grid é mais adequado -->
+          <div class="item">
+            <img src="./src/images/gallicoemoura-site.png" draggable="false" />
+            <h4>Gallico &amp; Moura Advogados</h4>
+            <p>
+              Site desenvolvido por mim, usando Bootstrap, CSS e Javascript.
+            </p>
+            <!-- Hyperlink com target blank para que o link abra em outra janela, sem afetar a experiência do usuário -->
+            <a href="https://gallicoemouraadv.com/" target="_blank"
+              >Disponível aqui</a
+            >
+          </div>
+          <div class="item">
+            <img src="./src/images/shutdown-helper.png" draggable="false" />
+            <h4>Python Shutdown Helper</h4>
+            <p>
+              Programa que roda em prompt e agenda desligamentos de forma mais
+              didática.
+            </p>
+            <a
+              href="https://github.com/callmevinbr/timed-shutdown-helper/"
+              target="_blank"
+              >Disponível aqui</a
+            >
+          </div>
+          <div class="item">
+            <img src="./src/images/wip-portfolio.png" draggable="false" />
+            <h4>(WIP) Meu Portfólio oficial</h4>
+            <p>
+              Projeto Front-end único e com animações que estou desenvolvendo
+              com GSAP.
+            </p>
+            <a href="#portfolio">Em breve...</a>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="container" id="contato">
+        <h4 class="title large">Contato</h4>
+        <!-- Utilizei <small> pois o texto é apenas uma observação, deve-se chamar menos atenção -->
+        <small
+          style="
+            text-align: center;
+            font-weight: bold;
+            color: rgb(0, 0, 0, 0.5);
+          "
+          >Não se preocupe! Nenhuma informação será armazenada. <br />Isto é
+          apenas uma simulação de formulário.</small
+        >
+        <!-- Neste formulário, todos os inputs de texto são obrigatórios. A validação optei por fazer de forma nativa -->
+        <form id="form">
+          <!-- Aqui os elementos são encapsulados dentro de divs para que sejam agrupados e não separados pela formatação do formulário -->
+          <div>
+            <label for="nome">Nome:</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Vinicius..."
+              required />
+          </div>
+          <div>
+            <label for="email">E-mail:</label>
+            <!-- input do tipo e-mail para que possa ser validado nativamente -->
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="exemplo@gmail.com"
+              required />
+          </div>
+          <div>
+            <label for="mensagem">Mensagem:</label>
+            <textarea
+              name="mensagem"
+              id="mensagem"
+              placeholder="Sua mensagem aqui..."
+              required></textarea>
+          </div>
+
+          <!-- Container simples que é flexível e se quebra em 2 linhas para telas menores -->
+          <div class="buttons-container">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+          </div>
+        </form>
+
+        <!-- Mensagem que aparece após o envio do formulário simulado, inicialmente oculta -->
+        <div class="success" id="successMessage">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="21" fill="#4CAF50" />
+            <path
+              fill="#CCFF90"
+              d="M34.6 14.6L21 28.2l-5.6-5.6l-2.8 2.8l8.4 8.4l16.4-16.4z" />
+          </svg>
+
+          Formulário enviado com sucesso!
+        </div>
+      </div>
+    </main>
+
+    <script type="text/javascript">
+      var form = document.getElementById("form");
+      var successMessage = document.getElementById("successMessage");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // impede o recarregamento da página
+        showSentMessage(); // executa a função para exibir a mensagem de sucesso
+        form.reset();
+      });
+
+      // Função simples que exibe a mensagem de sucesso do formulário
+      function showSentMessage() {
+        successMessage.style.display = "flex";
+        successMessage.style.opacity = 1;
+
+        // rola o elemento para dentro da visão para ser mais dinâmico
+        successMessage.scrollIntoView({ block: "start" });
+      }
+    </script>
+  </body>
+</html>
