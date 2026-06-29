@@ -10,7 +10,7 @@
   <body>
     <header>
       <!-- Adicionado nav para uma semântica melhor -->
-      <nav class="header-items">
+      <nav class="header-items desktop">
         <!-- Hyperlink foi usado antes da div para que ela inteira tenha o evento de redirecionamento -->
         <!-- O link é o ID dos elementos na página, para rolar até eles -->
         <a href="#sobreMim">
@@ -26,7 +26,30 @@
           <div class="item">Contato</div>
         </a>
       </nav>
+      <nav class="header-items mobile">
+        <div class="btn-menu">
+          <div class="dash"></div>
+          <div class="dash"></div>
+          <div class="dash"></div>
+        </div>
+      </nav>
     </header>
+
+    <!-- Menu lateral que é exibido apenas para mobile -->
+    <div class="items-list">
+      <a href="#sobreMim">
+        <div class="item">Sobre mim</div>
+      </a>
+      <a href="#formacao">
+        <div class="item">Formação</div>
+      </a>
+      <a href="#portfolio">
+        <div class="item">Portfólio</div>
+      </a>
+      <a href="#contato">
+        <div class="item">Contato</div>
+      </a>
+    </div>
 
     <!-- Aqui reside o conteúdo principal do site -->
     <!-- OBS: Usei o Prettier para a formatação do código. Por isso, algumas formatações podem estar peculiares -->
@@ -88,20 +111,20 @@
         <!-- O que determina o tipo de ordenação é o type="" após a tag -->
         <ol type="1">
           <li>
-            <i>Colégio Técnico Bento Quirino</i> &dashv;
-            <b>Informática/TI</b> &dashv; 2020 à 2022
+            <i>Colégio Técnico Bento Quirino</i> &ndash;
+            <b>Informática/TI</b> &ndash; 2020 à 2022
           </li>
           <li>
-            <i>UNISAL - Centro Universitário Salesiano de São Paulo</i> &dashv;
-            <b>Análise e Desenvolvimento de Sistemas</b> &dashv; 2023 à 2025
+            <i>UNISAL - Centro Universitário Salesiano de São Paulo</i> &ndash;
+            <b>Análise e Desenvolvimento de Sistemas</b> &ndash; 2023 à 2025
           </li>
           <li>
-            <i>Trios de Capacitação</i> &dashv;
-            <b>Testes Funcionais Web e Mobile</b> &dashv; 2025 à 2025
+            <i>Trios de Capacitação</i> &ndash;
+            <b>Testes Funcionais Web e Mobile</b> &ndash; 2025 à 2025
           </li>
           <li>
-            <i>UNINTER - Centro Universitário Internacional</i> &dashv;
-            <b>Engenharia de Software (Remoto)</b> &dashv; 2025 à 2029
+            <i>UNINTER - Centro Universitário Internacional</i> &ndash;
+            <b>Engenharia de Software (Remoto)</b> &ndash; 2025 à 2029
           </li>
         </ol>
 
@@ -236,6 +259,18 @@
     <script type="text/javascript">
       var form = document.getElementById("form");
       var successMessage = document.getElementById("successMessage");
+      var btnMenu = document.querySelector(".btn-menu");
+      var itemsList = document.querySelector(".items-list");
+
+      btnMenu.addEventListener("click", () => {
+        if (btnMenu.classList.contains("collapsed")) {
+          btnMenu.classList.remove("collapsed");
+          itemsList.classList.remove("collapsed");
+        } else {
+          btnMenu.classList.add("collapsed");
+          itemsList.classList.add("collapsed");
+        }
+      });
 
       form.addEventListener("submit", function (event) {
         event.preventDefault(); // impede o recarregamento da página

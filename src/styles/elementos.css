@@ -29,20 +29,71 @@ hr {
   background-color: rgba(220, 220, 220, 0.75);
 }
 
-.header-items > a > .item {
+.header-items > a > .item,
+.items-list > a > .item {
   padding: 0.5em 1em;
+  width: fit-content;
   border: 2px solid green;
   border-radius: 5px;
   cursor: pointer;
   color: white;
+  /* Aplica uma transição a todos os valores */
   transition: all 0.2s ease;
 }
 
 /* Estilo que aciona ao colocar o cursor em cima do elemento, ou clicar (no caso de celular) */
-.header-items > a > .item:hover {
+.header-items > a > .item:hover,
+.items-list > a > .item:hover {
   background-color: white;
   border-radius: 10px;
   color: green;
+}
+
+.btn-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  padding: 1em;
+  background-color: var(--phantom-red);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  z-index: 1091;
+}
+
+.btn-menu.collapsed {
+  border-radius: 100%;
+}
+
+.dash {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.1s ease-in-out;
+  position: absolute;
+}
+
+.dash:nth-child(1) {
+  transform: translateY(-300%);
+}
+
+.dash:nth-child(3) {
+  transform: translateY(300%);
+}
+
+.btn-menu.collapsed > .dash:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.btn-menu.collapsed > .dash:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.btn-menu.collapsed > .dash:nth-child(3) {
+  opacity: 0;
 }
 
 .projects-flex > .item {

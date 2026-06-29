@@ -1,3 +1,17 @@
+@media screen and (max-width: 515px) {
+  .mobile {
+    display: flex !important;
+  }
+
+  .desktop {
+    display: none !important;
+  }
+
+  .items-list {
+    display: flex !important;
+  }
+}
+
 /* Isso aqui é muito útil... Uso bastante */
 /* Isso determina que a borda dos elementos também fazem parte do tamanho dele, evitando inconsistência e vazamento */
 *,
@@ -51,6 +65,29 @@ main {
   gap: 1em;
 }
 
+.items-list {
+  position: fixed;
+  display: none;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+  gap: 1em;
+  justify-content: end;
+  align-items: end;
+  right: -100%;
+  top: 92px;
+  background-color: rgba(0, 141, 0, 0.7);
+  backdrop-filter: blur(10px);
+  transition: right 0.3s ease-in-out;
+  z-index: 1091;
+}
+
+/* Ao ser adicionada a um elemento fixo ou absoluto, move ele para a direita */
+.collapsed {
+  right: 0;
+}
+
 .container {
   display: flex;
   flex-wrap: nowrap;
@@ -85,3 +122,12 @@ main {
   gap: 2;
 }
 
+.mobile {
+  display: none;
+  align-items: end;
+  justify-content: end;
+}
+
+.desktop {
+  display: flex;
+}
